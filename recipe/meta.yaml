@@ -40,6 +40,8 @@ test:
     - pip check
   requires:
     - pip
+  source_files:
+    - openml
 
 about:
   home: https://openml.org/
