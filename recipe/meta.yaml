@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/openml/openml-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a0c9bd960a9b41be7cb6cda76e33ce575cb049f5768f97f63b02db6fe1ab8e09
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: aa53eaacb1a16edeb8ef429a5cffc884aa86b6ca0b475350b9bf46ba41bf34c9
 
 build:
   number: 0
@@ -40,8 +40,6 @@ test:
     - pip check
   requires:
     - pip
-  source_files:
-    - openml
 
 about:
   home: https://openml.org/
