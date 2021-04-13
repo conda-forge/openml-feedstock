@@ -7,6 +7,7 @@ package:
   version: {{ version }}
 
 patches:
+  - 0001-Fix-folder.patch
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
