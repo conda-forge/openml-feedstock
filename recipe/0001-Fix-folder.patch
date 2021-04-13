@@ -16,7 +16,7 @@ index 9e2e697d..1a9997b0 100644
      if not os.path.exists(config_dir):
          try:
 -            os.mkdir(config_dir)
-+            os.makedirs(config_dir, exists=True)
++            os.makedirs(config_dir, exist_ok=True)
              cache_exists = True
          except PermissionError:
              cache_exists = False
