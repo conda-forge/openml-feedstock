@@ -11,6 +11,7 @@ source:
   sha256: a0c9bd960a9b41be7cb6cda76e33ce575cb049f5768f97f63b02db6fe1ab8e09
   patches:
     - 0001-Fix-file-exist.patch
+    - 0001-Fix-cache_directory.patch
 
 build:
   number: 0
