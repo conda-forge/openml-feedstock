@@ -1,5 +1,5 @@
 {% set name = "openml" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.0" %}
 
 
 package:
@@ -7,8 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}-python/archive/v{{ version }}.tar.gz
-  sha256: 360461d27c7795ee7d6a86cd15e0108b2876d10a4120afc8417e9ce64d0cb026
+  url: https://github.com/openml/openml-python/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: a0c9bd960a9b41be7cb6cda76e33ce575cb049f5768f97f63b02db6fe1ab8e09
+  patches:
+    - 0001-Fix-file-exist.patch
+    - 0001-Fix-cache_directory.patch
 
 build:
   number: 0
@@ -21,8 +24,10 @@ requirements:
     - python >=3.6
   run:
     - liac-arff >=2.4.0
+    - minio
     - numpy >=1.6.2
     - pandas >=1.0.0
+    - pyarrow
     - python >=3.6
     - python-dateutil
     - requests

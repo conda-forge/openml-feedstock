@@ -1,0 +1,25 @@
+From 6ff205624483d138d70c494526f3288c6e3c1110 Mon Sep 17 00:00:00 2001
+From: BastianZim <10774221+BastianZim@users.noreply.github.com>
+Date: Tue, 13 Apr 2021 12:33:52 +0200
+Subject: [PATCH] Fix cache_directory
+
+---
+ openml/config.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/openml/config.py b/openml/config.py
+index 40789ffa..4516e96e 100644
+--- a/openml/config.py
++++ b/openml/config.py
+@@ -235,7 +235,7 @@ def _setup(config=None):
+     # create the cache subdirectory
+     if not os.path.exists(cache_directory):
+         try:
+-            os.mkdir(cache_directory)
++            os.makedirs(cache_directory, exist_ok=True)
+         except PermissionError:
+             openml_logger.warning(
+                 "No permission to create openml cache directory at %s! This can result in "
+-- 
+2.30.2
+
