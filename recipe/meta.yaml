@@ -1,5 +1,5 @@
 {% set name = "openml" %}
-{% set version = "0.12.0" %}
+{% set version = "0.12.1" %}
 
 
 package:
@@ -7,11 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/openml/openml-python/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: a0c9bd960a9b41be7cb6cda76e33ce575cb049f5768f97f63b02db6fe1ab8e09
-  patches:
-    - 0001-Fix-file-exist.patch
-    - 0001-Fix-cache_directory.patch
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openml-{{ version }}.tar.gz
+  sha256: 2c57d242de582ab37347b3484d3f79092fc7aec30c255831789daefc756ae638
 
 build:
   number: 0
