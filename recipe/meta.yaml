@@ -1,5 +1,5 @@
 {% set name = "openml" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 
 package:
@@ -8,11 +8,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openml-{{ version }}.tar.gz
-  sha256: 2c57d242de582ab37347b3484d3f79092fc7aec30c255831789daefc756ae638
+  sha256: cefb4792ca12ee87ab3acc5e5afb4e9d205c398621e2424f2f5de1564cfee849
 
 build:
   number: 0
   noarch: python
+  entry_points:
+    - openml=openml.cli:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -38,6 +40,7 @@ test:
     - openml.datasets
   commands:
     - pip check
+    - openml --help
   requires:
     - pip
 
