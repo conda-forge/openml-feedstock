@@ -1,5 +1,5 @@
 {% set name = "openml" %}
-{% set version = "0.14.2" %}
+{% set version = "0.15.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openml-{{ version }}.tar.gz
-  sha256: cf954bd7918f687c46034f9ca097f9bc9ee5d1cdea0df5a8d627efc96abe127d
+  sha256: 3e4d1da80e9b38f5e44d93b23aa58726a77b7039a5a0498f86a5231aeee8e4a6
 
 build:
   number: 0
