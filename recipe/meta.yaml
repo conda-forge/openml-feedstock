@@ -21,6 +21,7 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools >=61.0
   run:
     - liac-arff >=2.4.0
     - minio
@@ -37,7 +38,6 @@ requirements:
 test:
   imports:
     - openml
-    - openml.datasets
   commands:
     - pip check
     - openml --help
