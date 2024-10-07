@@ -22,6 +22,7 @@ requirements:
     - pip
     - python >=3.8
     - setuptools >=61.0
+    - packaging
   run:
     - liac-arff >=2.4.0
     - minio
