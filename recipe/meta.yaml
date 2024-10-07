@@ -34,6 +34,7 @@ requirements:
     - scikit-learn >=0.18
     - scipy >=0.13.3
     - xmltodict
+    - tqdm
 
 test:
   imports:
