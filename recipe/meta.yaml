@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openml-{{ version }}.tar.gz
   sha256: cf954bd7918f687c46034f9ca097f9bc9ee5d1cdea0df5a8d627efc96abe127d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - openml=openml.cli:main
@@ -20,14 +20,14 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - liac-arff >=2.4.0
     - minio
     - numpy >=1.6.2,<2
     - pandas >=1.0.0
     - pyarrow
-    - python >=3.8
+    - python >={{ python_min }}
     - python-dateutil
     - requests
     - scikit-learn >=0.18
@@ -43,6 +43,7 @@ test:
     - openml --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://openml.org/
