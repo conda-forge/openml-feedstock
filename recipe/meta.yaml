@@ -34,6 +34,7 @@ requirements:
     - scipy >=0.13.3
     - xmltodict
     - tqdm
+    - packaging
 
 test:
   imports:
